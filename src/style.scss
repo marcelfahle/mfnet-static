@@ -1,0 +1,133 @@
+@import "~normalize.css/normalize.css";
+
+
+$yellow: #FFCD44;
+$lightgray: #F7F7F7;
+$headergray: #1a1b1e;
+$copygray: #74767f;
+
+html, body {
+  height: 100%;
+}
+html { 
+  font-size: 62.5%;
+}
+.site {
+  background: $lightgray;
+}
+
+
+@mixin h2 {
+  color: $headergray;
+	font-family: Lora;
+	font-size: 4.4rem;
+	font-weight: 400;
+	line-height: 1.23em;
+}
+@mixin copy {
+  color: $copygray;
+  font-family: Lato;
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 1.22em;
+}
+
+
+@mixin content-position-main {
+  margin-left: 16.7%;
+  max-width: 92rem;
+}
+
+
+
+
+/* lato-regular - latin */
+//@font-face {
+//  font-family: 'Lato';
+//  font-style: normal;
+//  font-weight: 400;
+//  src: local('Lato Regular'), local('Lato-Regular'),
+//       url('fonts/lato-v11-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+//       url('fonts/lato-v11-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+//}
+/* lora-regular - latin */
+//
+//@font-face {
+//  font-family: 'Lora';
+//  font-style: normal;
+//  font-weight: 400;
+//  src: url('fonts/lora-v9-latin-regular.eot'); /* IE9 Compat Modes */
+//  src: local('Lora'), local('Lora-Regular'),
+//       url('fonts/lora-v9-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//       url('fonts/lora-v9-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+//       url('fonts/lora-v9-latin-regular.woff') format('woff'), /* Modern Browsers */
+//       url('fonts/lora-v9-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+//       url('fonts/lora-v9-latin-regular.svg#Lora') format('svg'); /* Legacy iOS */
+//}
+
+
+
+.Intro {
+  font-family: 'Lato';
+  background: black;
+  color: white;
+  height: 100vh;
+  //max-height: 960px;
+}
+
+.site-title {
+  margin: 0;
+  padding-top: 4.6rem;
+  margin-left: 3rem;
+  font-size: 2.8rem;
+  a {
+    color: white;
+    text-decoration: none;
+    &:hover, &:active {
+      color: $yellow;
+    }
+  }
+  @media (min-width: 800px) {
+    padding-top: 6.6rem;
+    margin-left: 5rem;
+    font-size: 1.8rem;
+
+  }
+}
+.site-description {
+  margin: 0;
+  margin-left: 9.8%;
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-top: 10vh;
+  max-width: 80%;
+  del { color: #c7c7c7; }
+  strong, a { color: $yellow; font-weight: 400; text-decoration: none; }
+
+  @media (min-width: 800px) {
+    max-width: none;
+    @include content-position-main;
+    font-size: 3.2rem;
+    margin-top: 20vh;
+    margin-top: 20vh;
+  }
+}
+.site-contact {
+  font-size: 1.8rem;
+  margin-left: 9.8%;
+  margin-top: 4rem;
+  line-height: 1.54;
+  max-width: 80%;
+  a {
+    color: $yellow;
+    text-decoration: none;
+  }
+  @media (min-width: 800px) {
+    font-size: 2.4rem;
+    margin-left: 16.7%;
+    margin-top: 8rem;
+    max-width: 60rem;
+  }
+}
